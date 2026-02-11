@@ -1,0 +1,116 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== FOND JAUNE PASTEL + FLEURS ===== */
+body{
+    min-height:100vh;
+    text-align:center;
+    padding-top:50px;
+    background-color:#fff7c2; /* jaune pastel */
+
+    /* fleurs roses en motif */
+    background-image: radial-gradient(circle at 20% 20%, #ffb6c1 8px, transparent 9px),
+                      radial-gradient(circle at 80% 30%, #ffb6c1 8px, transparent 9px),
+                      radial-gradient(circle at 40% 70%, #ffb6c1 8px, transparent 9px),
+                      radial-gradient(circle at 70% 80%, #ffb6c1 8px, transparent 9px);
+
+    background-size:200px 200px;
+    animation: fondAnime 15s linear infinite;
+}
+
+/* Animation douce du fond */
+@keyframes fondAnime{
+    0%{background-position:0 0;}
+    100%{background-position:200px 200px;}
+}
+
+/* ===== TITRES ===== */
+h1{
+    color:#d63384;
+    margin-bottom:20px;
+    animation: fadeDown 1.5s ease;
+}
+
+/* ===== LIENS ===== */
+a{
+    display:block;
+    width:250px;
+    margin:10px auto;
+    padding:10px;
+    text-decoration:none;
+    background:#ffb6c1;
+    color:white;
+    border-radius:25px;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+/* Animation hover */
+a:hover{
+    background:#ff69b4;
+    transform:scale(1.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== MENU DÉROULANT ===== */
+.menu{
+    display:inline-block;
+    position:relative;
+    margin-top:20px;
+}
+
+.menu-btn{
+    background:#ff69b4;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.menu-content{
+    display:none;
+    position:absolute;
+    background:white;
+    min-width:200px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+.menu-content a{
+    background:white;
+    color:#d63384;
+    border-radius:0;
+}
+
+.menu-content a:hover{
+    background:#ffe0f0;
+    transform:none;
+}
+
+.menu:hover .menu-content{
+    display:block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
