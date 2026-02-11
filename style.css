@@ -1,0 +1,26 @@
+body {
+	background-image: url(imagefond.jpg);
+}
+p{
+	color: purple;
+	background: lightyellow;
+	font-family: Comics;
+}
+h2
+{
+
+	color: darkgreen;
+
+}
+.special 
+{
+	background: white;
+}
+
+div 
+{
+	border: 4px grey solid;
+	border-radius: 35px;
+	width: 800px;
+	height: 200px;
+}
